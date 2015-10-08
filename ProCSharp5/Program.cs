@@ -15,7 +15,7 @@ namespace ProCSharp5
             //ConfigureUI();                        
             Test test = new Test();
             
-            //test.showEnvironmentProperties();
+            test.showEnvironmentProperties();
             /*
             try
             {
