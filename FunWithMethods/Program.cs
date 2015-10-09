@@ -33,7 +33,10 @@ namespace FunWithMethods
             SwapStrings(str1, str2);
             Console.WriteLine("Str1 = {0}\nStr2={1}", str1, str2);
             */
-            EnterLogData("MyMessage");
+            //EnterLogData("MyMessage");
+            //WriteConsoleMessage(color: ConsoleColor.Blue, textColor: ConsoleColor.Yellow, message: "Hello");
+            //WriteConsoleMessage(ConsoleColor.Red, ConsoleColor.Yellow, message: "Hello");
+            //WriteConsoleMessage(message: "Hello");
             Console.ReadLine();
         }
 
@@ -72,5 +75,19 @@ namespace FunWithMethods
             Console.WriteLine("Owner of Error: {0}", owner);
             Console.WriteLine("Time of Error: {0}", timeStamp);
         }
+        static void WriteConsoleMessage(ConsoleColor color = ConsoleColor.Black, ConsoleColor textColor = ConsoleColor.White, String message = "Console message")
+        {
+            ConsoleColor oldColor = Console.BackgroundColor;
+            ConsoleColor oldTextColor = Console.ForegroundColor;
+
+            Console.BackgroundColor = color;
+            Console.ForegroundColor = textColor;
+
+            Console.WriteLine("Message: {0}",message);
+
+            Console.BackgroundColor = oldColor;
+            Console.ForegroundColor = oldTextColor;
+        }
+
     }
 }
